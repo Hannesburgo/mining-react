@@ -2,16 +2,16 @@
 import React from "react";
 
 // Modules
-import Mines from "../modules/Mines";
+import database from "../modules/FakeDatabase";
+import resourceGenerator from "../modules/PrimaryResourceGenerator";
 
-var Page = new Mines();
-Page.createOre(3);
+resourceGenerator.createRandomOres(1);
 
 function Body() {
     return (
         <div id="contentZone">
             <div id="contentBackground"></div>
-            {Page.getPageReactComponents}
+            {database.getPageObjectsReactComponents}
         </div>
     )
 }

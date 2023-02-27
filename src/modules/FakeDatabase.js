@@ -6,53 +6,43 @@ import TinOre from "../images/TinOre.webp";
 import SilverOre from "../images/SilverOre.webp";
 import GoldOre from "../images/GoldOre.webp";
 
-// Ore Dictionary
-const Ores = {
-    Stone: {
-        name: "Stone",
-        type: "ore",        
-        img: StoneOre,
-        hardness: 1
-    }, 
-    Coal: {
-        name: "Coal",
-        type: "ore",
-        img: CoalOre,
-        hardness: 5
-    }, 
-    Copper: {
-        name: "Copper",
-        type: "ore",
-        img: CopperOre,
-        hardness: 10
-    }, 
-    Tin: {
-        name: "Tin",
-        type: "ore",
-        img: TinOre,
-        hardness: 10
-    }, 
-    Silver: {
-        name: "Silver",
-        type: "ore",
-        img: SilverOre,
-        hardness: 25
-    }, 
-    Gold: {
-        name: "Gold",
-        type: "ore",
-        img: GoldOre,
-        hardness: 50
+// Modules
+import PrimaryResource from "./PrimaryResource";
+
+class FakeDatabase {
+    constructor() {
+        this.Ores = [
+            new PrimaryResource("Stone", 1, StoneOre, "ore"),
+            new PrimaryResource("Coal", 5, CoalOre, "ore"),
+            new PrimaryResource("Copper", 10, CopperOre, "ore"),
+            new PrimaryResource("Tin", 10, TinOre, "ore"),
+            new PrimaryResource("Silver", 25, SilverOre, "ore"),
+            new PrimaryResource("Gold", 50, GoldOre, "ore")
+        ]
+        this.pageObjects = [];
+    }
+
+    get getOres() {
+        return this.Ores;
+    }
+
+    get getPageObjects() {
+        return this.pageObjects;
+    }
+
+    get getPageObjectsReactComponents() {
+        let x = [];
+        this.pageObjects.forEach(function(obj){
+            x.push(obj.getReactComponent);
+        })
+        return x;
+    }
+
+    addPageObjects(obj) {
+        this.pageObjects.push(obj);
     }
 }
 
-const OresArray = [
-    Ores.Stone,
-    Ores.Coal,
-    Ores.Copper,
-    Ores.Tin,
-    Ores.Silver,
-    Ores.Gold
-];
+var database = new FakeDatabase();
 
-export default OresArray;
+export default database;

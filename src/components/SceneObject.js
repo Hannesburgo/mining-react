@@ -7,9 +7,9 @@ function SceneObject(props) {
             <img 
                 src={props.img} 
                 alt="" 
-                id={props.id} 
                 className={props.className}
-                onClick={props.function}
+                onClick={props.clickFunction}
+                key={props.randomKey}
             ></img>
         </div>
     )
