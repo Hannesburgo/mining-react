@@ -4,13 +4,13 @@ import React from "react";
 // Components
 import SceneObject from "./SceneObject";
 
-function FooterObject(props) {
+function InventoryObject(props) {
     return (
-        <ul className="InventoryObject">
-            {<SceneObject img={props.img} className="InventoryIcon"/>}
+        <ul className="InventoryFrame">
+            {<SceneObject key={props.randomKey} img={props.img} className="InventoryIcon"/>}
             <h4>{props.value}</h4>
         </ul>
     )
 }
 
-export default FooterObject;
+export default InventoryObject;

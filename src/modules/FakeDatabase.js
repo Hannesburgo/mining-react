@@ -41,6 +41,10 @@ class FakeDatabase {
     addPageObjects(obj) {
         this.pageObjects.push(obj);
     }
+
+    removePageObjects(index) {
+        this.pageObjects.pop(index);
+    }
 }
 
 var database = new FakeDatabase();
