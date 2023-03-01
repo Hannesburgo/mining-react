@@ -1,20 +1,23 @@
 // Essentials
 import React from "react";
 
-// Modules 
-import database from "./FakeDatabase";
+// Database
+import primaryResourceData from "./fake-databases/primaryResourceData";
 
 // Components
 import InventoryObject from "../components/InventoryObject";
 
 class InventoryHandler {
     oreInventory() {
-        let x = [];
-        database.getOres.forEach(ore => {
-            let randomKey = Math.floor(Math.random() * 999999);
-            x.push(<InventoryObject key={randomKey} img={ore.getImg} value="0"/>)
-        });
-
+        let x = primaryResourceData.filter(resource => {
+            return (resource.type === "ore" ? true : false);
+        }).map(ore => {
+            return (
+            <InventoryObject
+                key={ore.id}
+                img={ore.img}
+            />);
+        })
         return x;
     }
 }

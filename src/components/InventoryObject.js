@@ -7,8 +7,12 @@ import SceneObject from "./SceneObject";
 function InventoryObject(props) {
     return (
         <ul className="InventoryFrame">
-            {<SceneObject key={props.randomKey} img={props.img} className="InventoryIcon"/>}
-            <h4>{props.value}</h4>
+            <SceneObject 
+                key={props.key} 
+                img={"../images/"+props.img} 
+                className="InventoryIcon"
+            />
+            <h4>0</h4>
         </ul>
     )
 }

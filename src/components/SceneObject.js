@@ -4,12 +4,12 @@ import React from "react";
 function SceneObject(props) {
     return (
         <img 
+        key={props.key}
         src={props.img} 
         alt="" 
         className={props.className}
-        onClick={props.clickFunction}
-        key={props.randomKey}
-    ></img>
+        onClick={props.onClick}
+        />
     )
 }
 

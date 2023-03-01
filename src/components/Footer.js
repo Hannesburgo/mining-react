@@ -7,7 +7,6 @@ import InvHandler from "../modules/InventoryHandler";
 function Footer() {
     return (
         <footer id="footerInventory">
-            <div id="footerBackground"></div>
             <li id="footerList"> 
                 {InvHandler.oreInventory()}
             </li>
