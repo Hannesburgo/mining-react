@@ -2,21 +2,21 @@
 import React from "react";
 
 // Database
-import primaryResourceData from "./fake-databases/primaryResourceData";
+import itemData from "./fake-databases/itemData";
 
 // Components
 import InventoryObject from "../components/InventoryObject";
 
 class InventoryHandler {
-    oreInventory() {
-        let x = primaryResourceData.filter(resource => {
-            return (resource.type === "ore" ? true : false);
-        }).map(ore => {
+    inventorySort(type) {
+        let x = itemData.filter(resource => {
+            return (resource.type === type ? true : false);
+        }).map(filtered => {
             return (
             <InventoryObject
-                key={ore.id}
-                type={ore.type}
-                img={ore.img}
+                key={filtered.id}
+                type={filtered.type}
+                img={filtered.img}
             />);
         })
         return x;

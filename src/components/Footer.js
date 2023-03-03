@@ -8,7 +8,7 @@ function Footer() {
     return (
         <footer id="footerInventory">
             <li id="footerList"> 
-                {InvHandler.oreInventory()}
+                {InvHandler.inventorySort("ore")}
             </li>
         </footer>
     );

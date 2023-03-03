@@ -32,12 +32,14 @@
   padding: 1%;
 
   filter:drop-shadow(15px 15px 10px);
+  cursor:url("../public/cursorPick1.cur"),auto;
 }
 
 .SceneObject:active {
   animation-name: ClickAnimation;
   animation-duration: 0.5s;
   animation-direction: alternate;
+  cursor:url("../public/cursorPick2.cur"),auto;
 }
 
 .InventoryIcon {
@@ -64,10 +66,13 @@
 }
 
 #navList > li > button {
-  background-color: #553700;
+  background-color: #cf6f00;
   color: white;
 
-  border: none;
+  border:groove;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #cf6f00;
 
   text-align: center;
   display: inline-block;
@@ -82,9 +87,8 @@
 }
 
 #navList > li > button:hover {
-  width: 125px;
-  height: 35px;
-  background-color: #ff9100;
+  background-color: #ffc400;
+  color: rgb(41, 41, 41);
 }
 
 #navList > li > button:active {
@@ -105,7 +109,7 @@
   overflow: auto;
 
   background: rgb(41,15,0);
-  background: linear-gradient(180deg, rgba(41,15,0,1) 0%, rgba(70,70,70,1) 100%);
+  background: linear-gradient(180deg, rgb(71, 71, 71) 5%, rgb(19, 19, 19) 60%);
 
   border-style: groove;
   border-image: url(../public/images/border.jpg) 10 round;

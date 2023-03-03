@@ -1,4 +1,4 @@
-const primaryResourceData = [
+const itemData = [
     {
         id: 0,
         type: "ore",
@@ -40,7 +40,42 @@ const primaryResourceData = [
         name: "Gold",
         hardness: 50,
         img: "GoldOre.webp"
+    },
+    {
+        id: 6,
+        type: "log",
+        name: "Pine",
+        hardness: 1,
+        img: "PineLog.webp"
+    },
+    {
+        id: 7,
+        type: "log",
+        name: "Oak",
+        hardness: 5,
+        img: "OakLog.webp"
+    },
+    {
+        id: 8,
+        type: "log",
+        name: "Willow",
+        hardness: 10,
+        img: "WillowLog.webp"
+    },
+    {
+        id: 9,
+        type: "log",
+        name: "Mahogany",
+        hardness: 25,
+        img: "MahoganyLog.webp"
+    },
+    {
+        id: 10,
+        type: "log",
+        name: "Maple",
+        hardness: 50,
+        img: "MapleLog.webp"
     }
 ]
 
-export default primaryResourceData;
+export default itemData;
