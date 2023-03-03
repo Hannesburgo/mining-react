@@ -15,6 +15,7 @@ class InventoryHandler {
             return (
             <InventoryObject
                 key={ore.id}
+                type={ore.type}
                 img={ore.img}
             />);
         })

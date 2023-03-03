@@ -9,7 +9,7 @@ function InventoryObject(props) {
         <ul className="InventoryFrame">
             <SceneObject 
                 key={props.key} 
-                img={"../images/"+props.img} 
+                img={"../images/"+props.type+"/"+props.img} 
                 className="InventoryIcon"
             />
             <h4>0</h4>

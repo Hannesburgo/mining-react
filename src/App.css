@@ -108,7 +108,7 @@
   background: linear-gradient(180deg, rgba(41,15,0,1) 0%, rgba(70,70,70,1) 100%);
 
   border-style: groove;
-  border-image: url(images/border.jpg) 10 round;
+  border-image: url(../public/images/border.jpg) 10 round;
 }
 
 #footerInventory {
